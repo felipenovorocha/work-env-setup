@@ -62,3 +62,17 @@ echo "########################"
 echo "#### STEAM INSTALL #####"
 echo "########################"
 sudo snap install steam
+
+echo "########################"
+echo "#### REAPER INSTALL #####"
+echo "########################"
+wget https://www.reaper.fm/files/7.x/reaper705_linux_x86_64.tar.xz
+tar xvf reaper705_linux_x86_64.tar.xz
+cd reaper_linux_x86_64
+rm -rf reaper705_linux_x86_64.tar.xz
+rm -rf reaper705_linux_x86_64.tar.xz
+
+apt update
+apt install build-essential libgtk-3-dev git pipewire-jack
+
+./install-reaper.sh
