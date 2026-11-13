@@ -1,5 +1,11 @@
 #! /bin/bash
 
+echo "##########################"
+echo "#### BG IMAGE UPDATE #####"
+echo "##########################"
+
+sudo apt install dbus-x11
+gsettings set org.gnome.desktop.background picture-uri "./bg-image.jpg"
 #Instalando git
 
 echo "############################"
@@ -8,15 +14,21 @@ echo "############################"
 apt install -y git
 
 #Instalando Neovim
-echo "###############################"
-echo "###### instalando neovim ######"
-echo "###############################"
+echo "###########################"
+echo "###### NEOVIM INTALL ######"
+echo "###########################"
 apt install -y neovim
 
+#Instalando Neovim
+echo "####################################"
+echo "###### HYPRLAND CONFIG SCRIPT ######"
+echo "####################################"
+./hyprland.sh
+
 #Instalando .files Lazyvim
-echo "#######################################"
-echo "###### instalando .files lazyvim ######"
-echo "#######################################"
+echo "#############################"
+echo "###### LAZYVIM INSTALL ######"
+echo "#############################"
 mkdir ~/.cofing/nvim
 git clone https://github.com/felipenovorocha/neovim-config ~/.config/nvim
 
