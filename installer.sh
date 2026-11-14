@@ -4,7 +4,8 @@ echo "##########################"
 echo "#### BG IMAGE UPDATE #####"
 echo "##########################"
 
-sudo apt install dbus-x11
+apt update
+gpt install dbus-x11
 gsettings set org.gnome.desktop.background picture-uri "./bg-image.jpg"
 #Instalando git
 
@@ -18,12 +19,6 @@ echo "###########################"
 echo "###### NEOVIM INTALL ######"
 echo "###########################"
 apt install -y neovim
-
-#Instalando Neovim
-echo "####################################"
-echo "###### HYPRLAND CONFIG SCRIPT ######"
-echo "####################################"
-./hyprland.sh
 
 #Instalando .files Lazyvim
 echo "#############################"
@@ -88,3 +83,11 @@ apt update
 apt install build-essential libgtk-3-dev git pipewire-jack
 
 ./install-reaper.sh
+
+echo "####################################"
+echo "###### HYPRLAND CONFIG SCRIPT ######"
+echo "####################################"
+
+apt install -y waybar kitty wofi hyprland hyprpaper hyprlock wl-clipboard
+
+echo "Concluído!"
