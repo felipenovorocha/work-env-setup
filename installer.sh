@@ -88,6 +88,21 @@ echo "####################################"
 echo "###### HYPRLAND CONFIG SCRIPT ######"
 echo "####################################"
 
-apt install -y waybar kitty wofi hyprland hyprpaper hyprlock wl-clipboard
+apt install -y waybar kitty wofi hyprland hyprpaper hyprlock wl-clipboard sway sway-notification-center
+
+echo "####################################"
+echo "###### HYPRSHOT CONFIG SCRIPT ######"
+echo "####################################"
+git clone https://github.com/Gustash/hyprshot
+ln -s $(pwd)/Hyprshot/hyprshot $HOME/.local/bin
+chmod -x Hyprshot/hyprshot
+
+echo "###############################"
+echo "###### CODE ENV INSTALL  ######"
+echo "###############################"
+apt install nodejs
+apt install npm
+apt install python3-pip
+apt install python3-venv
 
 echo "Concluído!"
