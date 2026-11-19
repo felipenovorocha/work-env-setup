@@ -105,4 +105,11 @@ apt install npm
 apt install python3-pip
 apt install python3-venv
 
+echo "###########################"
+echo "###### HERDR INSTALL ######"
+echo "###########################"
+curl -fsSL https://herdr.dev/install.sh | sh
+echo 'export PATH="$HOME/.local/bin:$PATH"' >>~/.bashrc
+source ~/.bashrc
+
 echo "Concluído!"
